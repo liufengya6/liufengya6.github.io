@@ -9,10 +9,14 @@
             margin: 0;
             padding: 20px;
             background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center; /* 新增：垂直居中 */
+            min-height: 100vh; /* 新增：确保body高度至少为视窗高度 */
         }
         .container {
             max-width: 1200px;
-            margin: 0 auto;
+            width: 100%; /* 新增：确保容器宽度适应屏幕宽度 */
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             grid-gap: 20px;
