@@ -6,60 +6,66 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            margin: 40px;
+            margin: 0;
+            padding: 20px;
             background-color: #f4f4f4;
-            color: #333;
         }
         .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-gap: 20px;
+        }
+        .card {
             background: white;
-            padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            max-width: 800px;
-            margin: auto;
+            overflow: hidden;
+        }
+        .card-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 15px;
+            color: #333;
         }
         h1, h2 {
-            color: #2c3e50;
+            color: #333;
+            margin-top: 0;
         }
         p {
-            color: #34495e;
+            color: #666;
             font-size: 16px;
-            line-height: 1.6;
-        }
-        section {
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #ecf0f1;
-            border-left: 5px solid #3498db;
-            border-radius: 5px;
-        }
-        .title {
-            font-weight: bold;
-            color: #3498db;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>上下电模块</h1>
-        <section>
-            <h2 class="title">模块介绍</h2>
-            <p>本模块负责管理MCU的上电和下电过程，以及快速上下电过程中底层软件的稳定运行。</p>
-        </section>
-        <section>
-            <h2 class="title">功能说明</h2>
-            <p>包括但不限于：</p>
-            <ul>
-                <li>MCU上电初始化</li>
-                <li>安全下电过程管理</li>
-                <li>快速上下电过程中的状态管理与恢复</li>
-            </ul>
-        </section>
-        <section>
-            <h2 class="title">开发进展</h2>
-            <p>当前项目状态：预研中。</p>
-            <p>计划于2025年搭载N90车型量产。</p>
-        </section>
+        <div class="card">
+            <img class="card-image" src="https://via.placeholder.com/300x200" alt="模块图片">
+            <div class="card-content">
+                <h2>模块介绍</h2>
+                <p>本模块负责管理MCU的上电和下电过程，以及快速上下电过程中底层软件的稳定运行。</p>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-image" src="https://via.placeholder.com/300x200" alt="功能说明">
+            <div class="card-content">
+                <h2>功能说明</h2>
+                <p>包括但不限于：MCU上电初始化、安全下电过程管理、快速上下电过程中的状态管理与恢复。</p>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-image" src="https://via.placeholder.com/300x200" alt="开发进展">
+            <div class="card-content">
+                <h2>开发进展</h2>
+                <p>当前项目状态：预研中。</p>
+                <p>计划于2025年搭载N90车型量产。</p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
